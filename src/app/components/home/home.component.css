@@ -1,0 +1,114 @@
+mat-sidenav-container {
+    height: 100%;
+    width: 100%;
+}
+
+mat-sidenav {
+    background-color: rgb(9, 46, 116);
+    width: 250px;
+}
+
+.logo {
+    background-color: rgb(31, 48, 245);
+    padding: 10px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin-top: 40px;
+    padding: 8px;
+    justify-content: center;
+}
+
+
+.button button {
+    width: 180px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: space-between;
+}
+
+.button button mat-icon {
+    font-size: 18px;
+}
+
+.data p {
+    font-weight: 700;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 120px;
+}
+
+ul li a mat-icon {
+    font-size: 20px;
+}
+
+ul li a:hover {
+    color: rgb(191, 186, 36);
+}
+
+ul:hover {
+    background-color: rgb(6, 30, 77);
+    padding: 20px;
+    transition: padding 0.3s;
+}
+
+
+
+
+mat-sidenav-content .menu {
+    background-color: white;
+}
+
+
+.menu-items {
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+.toggle button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 0%;
+    margin-right: 10px;
+}
+
+.toggle button mat-icon{
+    color: black;
+}
+
+
+
+.pipe {
+    border-left: 1px solid rgba(38, 35, 35, 0.1);
+    height: 35px;
+}
+
+.notification mat-icon {
+    color: rgba(14, 14, 14, 0.4);
+}
+
+.menu-right-site {
+    width: 23%;
+}
+
+

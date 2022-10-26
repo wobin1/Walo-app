@@ -1,0 +1,108 @@
+.dashboard {
+    margin-top: 4% ;
+    margin-left: 4%;
+    margin-right: 3%;
+    align-items: center;
+}
+
+.title-overview {
+    margin: 0%;
+    font-size: 11px;
+    color: rgba(167, 166, 166, 0.7);
+}
+
+.title-heading {
+    margin-top: 1%;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.today {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    width: 150px;
+    height: 41px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50%;
+    align-items: center;
+    color: rgba(33, 25, 25, 0.7);
+}
+
+.refresh {
+    
+    font-size: 14px;
+    background-color: rgb(31, 48, 245);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    align-items: center;
+    gap: 3px;
+
+}
+
+.cards {
+    margin-top: 2%;
+}
+
+.card {
+     margin-bottom: 3px;
+  
+}
+
+.card button {
+    background-color: rgba(31, 48, 245, 0.2);
+}
+
+.card button mat-icon {
+    color: rgb(248, 248, 248);
+
+}
+
+
+.amount {
+    font-weight: 800;
+}
+
+.name {
+    color: rgba(110, 108, 108, 0.4);
+}
+
+
+.charts {
+    margin-top: 2%;
+}
+
+.savings-chart mat-card {
+    height: 83%;
+    margin-bottom: 10px;
+}
+
+.investment-chart mat-card {
+    height: 83%;
+    margin-bottom: 10px;
+}
+
+
+
+.dot {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(31, 48, 245);
+    display: inline-block;   
+}
+
+.dot1 {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(9, 46, 116);
+    display: inline-block;   
+}

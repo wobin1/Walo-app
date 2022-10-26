@@ -1,0 +1,155 @@
+<mat-sidenav-container>
+  <!-- side nav start -->
+  <mat-sidenav *ngIf="sidebar" mode="side" fxShow.xs opened>
+    <!-- logo section start -->
+    <div class="logo">
+      <img src="/assets/images/Walo.png" width="150" alt="images" />
+    </div>
+    <!-- logo section end -->
+
+    <!-- menu start -->
+    <div class="menu" fxLayout="column" fxLayoutAlign="start center">
+      <div class="button">
+        <button (click)="showDashboard()">
+          DASHBOARD
+          <mat-icon *ngIf="!expandButtonSidenavdashboard">{{
+            navIconRight
+          }}</mat-icon>
+          <mat-icon *ngIf="expandButtonSidenavdashboard">{{
+            navIconDown
+          }}</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="dashboard">
+        <ul>
+          <li>
+            <a href=""><mat-icon>home</mat-icon> Dashboard</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button" style="margin-top: 0px">
+        <button (click)="showSaving()">
+          SAVINGS
+          <mat-icon *ngIf="!expandButtonSidenavSaving">{{
+            navIconRight
+          }}</mat-icon>
+          <mat-icon *ngIf="expandButtonSidenavSaving">{{
+            navIconDown
+          }}</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="saving">
+        <ul>
+          <li>
+            <a href=""><mat-icon>pie_chart</mat-icon> Savings</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button" style="margin-top: 0px">
+        <button (click)="showLoan()">
+          LOANS
+          <mat-icon *ngIf="!expandButtonSidenavSaving">{{
+            navIconRight
+          }}</mat-icon>
+          <mat-icon *ngIf="expandButtonSidenavSaving">{{
+            navIconDown
+          }}</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="loan">
+        <ul>
+          <li>
+            <a href=""> <mat-icon>show_chart</mat-icon> Loans</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="button" style="margin-top: 0px">
+        <button (click)="showInvestment()">
+          INVESTMENTS
+          <mat-icon *ngIf="!expandButtonSidenavSaving">{{
+            navIconRight
+          }}</mat-icon>
+          <mat-icon *ngIf="expandButtonSidenavSaving">{{
+            navIconDown
+          }}</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="investment">
+        <ul>
+          <li>
+            <a href=""> <mat-icon>score</mat-icon> Investments</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- menu end -->
+  </mat-sidenav>
+  <!-- side nav end -->
+
+  <!-- main content start -->
+  <mat-sidenav-content>
+    <div class="menu" >
+        <div class="menu-items" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%"  fxLayout="row wrap"  fxLayoutAlign="start center">
+            <!-- hamburger start -->
+                <div class="toggle" fxShow fxShow.md fxShow.sm fxShow.xs>
+                    <button (click)="hideSidebar()"> <mat-icon>menu</mat-icon></button>
+                    
+                </div>
+            <!-- hamburger end -->
+
+            <div class="search"  fxLayoutAlign="start center" fxLayoutGap="5px" fxHide.xs>
+
+              <!-- search input start -->
+               <mat-form-field class="search" >
+                <input matInput type="text" [(ngModel)]="searchInput">
+                <button *ngIf="searchInput" mat-icon-button aria-label="Clear" (click)="searchInput=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+               </mat-form-field>
+               <!-- search input end -->
+
+               <!-- search button start -->
+               <button mat-flat-button>Search</button>
+               <!-- start button end -->
+            </div>
+
+            <!-- spacer start -->
+            <div class="" fxFlex></div>
+            <!-- spacer end -->
+
+            <!-- right side menu start -->
+            <div class="dropdown" fxHide fxShow.sm fxShow.xs fxHide.md >
+                <mat-icon>more_vert</mat-icon>
+            </div>
+            <div class="menu-right-site" fxHide.sm fxHide.xs fxshow.md fxLayout="row wrap" fxLayoutAlign="space-between center">
+                <div class="user-data" fxLayout="row wrap">
+                    <div class="data" fxLayoutAligh="end center">
+                        <p style="margin: 0; text-align: end;">Musa</p>
+                        <span>musa@gmail.com</span>
+                    </div>
+                    <div class="login">
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                    </div>
+                </div>
+                <div class="pipe"></div>
+                <div class="notification" fxLayoutGap="3px">
+                    <mat-icon>notifications</mat-icon>
+                    <mat-icon>login</mat-icon>
+                </div>
+            </div>
+            <!-- right side menu end -->
+        </div>
+    </div>
+
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+    
+  </mat-sidenav-content>
+  <!-- Main content end -->
+</mat-sidenav-container>

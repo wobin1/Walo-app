@@ -1,0 +1,95 @@
+<div class="dashboard" fxLayout="row wrap">
+        <!-- title section -->
+        <div class="title">
+            <p class="title-heading">{{title}}</p>
+            <p class="title-overview">{{titleOverview}}</p>
+        </div>
+    
+        <div class="space" fxFlex></div>
+        <div class="filter" fxLayout fxFlex.md="100%" fxFlex.sm="100%" fxFlex.xs="100%" fxLayoutAlign="start center"  fxLayoutGap="10px">
+            <button mat-flat-button class="today"> Today <mat-icon>keyboard_arrow_down</mat-icon></button>
+            <button mat-flat-button class="refresh" color="primary"><mat-icon>cached</mat-icon> Refresh dashboard</button>
+        </div>
+   
+
+    <div class="cards" fxFlex="100%" fxFlex.sm="100%" fxFlex.xs="100%" fxLayoutGap="3%"  fxLayout="row wrap">
+        
+            <mat-card class="card" fxFlex="31.3%" fxFlex.md="31.3%" fxFlex.sm="45%" fxFlex.xs="45%" >
+                <mat-card-content fxLayout fxLayoutGap="30px" fxLayoutAlign="start center">
+                    <button mat-fab> <mat-icon>savings</mat-icon></button>
+    
+                    <div class="card-details">
+                        <div class="amount">NGN 0</div>
+                        <div class="name">SAVINGS</div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <!-- <div fxFlex="1%"></div> -->
+    
+            <mat-card class="card" fxFlex="31.3%" fxFlex.md="31.3%" fxFlex.sm="45%" fxFlex.xs="45%" >
+                <mat-card-content fxLayout fxLayoutGap="30px" fxLayoutAlign="start center">
+                    <button mat-fab> <mat-icon>account_balance_wallet</mat-icon></button>
+    
+                    <div class="card-details">
+                        <div class="amount">NGN 0</div>
+                        <div class="name">LOANS</div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+    
+            <mat-card class="card" fxFlex="31.3%" fxFlex.md="31.3%" fxFlex.sm="93%" fxFlex.xs="93%">
+                <mat-card-content fxLayout fxLayoutGap="30px" fxLayoutAlign="start center">
+                    <button mat-fab> <mat-icon>payments</mat-icon></button>
+    
+                    <div class="card-details">
+                        <div class="amount">NGN 0</div>
+                        <div class="name">INVESTMENT</div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+     
+    </div>
+
+    <!-- charts start -->
+    <div class="charts" fxLayout="row wrap" fxFlex="100%" fxLayoutGap="3%" fxFlex.sm="100%" fxFlex.xs="100%" >
+        <div class="savings-chart" fxFlex="48.5%" fxFlex.md="100%" fxFlex.sm="93%" fxFlex.xs="93%" >
+            <mat-card >
+                <div fxLayout fxLayoutAlign="space-between ">
+                    <div>
+                        <p>Total debit and credit on your savings</p>
+                    </div>
+    
+                    <div fxLayout fxFlex="30%" fxLayoutGap="10%">
+                        <p><span class="dot"></span> Debit</p>
+                        <p><span class="dot1"></span> credit</p>
+                    </div>
+                </div>
+
+                <div class="saving-chart">
+                    <canvas id="barchart"></canvas>
+                </div>
+            </mat-card>
+        </div>
+
+        <div class="investment-chart" fxFlex="48.5%" fxFlex.md="100%" fxFlex.sm="93%" fxFlex.xs="93%" >
+            <mat-card >
+                <div fxLayout fxLayoutAlign="space-between ">
+                    <div>
+                        <p>Investment and Interest</p>
+                    </div>
+    
+                    <div fxLayout fxFlex="40%" fxLayoutGap="10%">
+                        <p><span class="dot"></span> Investment</p>
+                        <p><span class="dot1"></span> Interest</p>
+                    </div>
+                </div>
+
+                <div class="investments-chart">
+                    <canvas id="barchart1"></canvas>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <!-- charts end -->
+</div>
+
